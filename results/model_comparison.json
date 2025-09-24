@@ -1,0 +1,11 @@
+{
+    "baseline_model": {
+        "accuracy": 0.9953051643192489,
+        "f1_score": 0.9952978860372445
+    },
+    "transformer_model": {
+        "accuracy": 1.0,
+        "f1_score": 1.0
+    },
+    "best_model_for_production": "Transformer"
+}
