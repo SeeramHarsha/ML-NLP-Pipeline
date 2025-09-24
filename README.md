@@ -25,48 +25,9 @@ The project is organized into the following directories and files:
 
 Follow these steps to set up the project, run the ML/NLP pipeline, and deploy the API locally.
 
-### 1. Clone the Repository (if applicable)
 
-If you haven't already, clone this repository to your local machine.
 
-```bash
-git clone <repository-url>
-cd nlp
-```
-
-### 2. Set Up Virtual Environment
-
-It's highly recommended to use a virtual environment to manage dependencies.
-
-```bash
-python -m venv venv
-# On Windows
-.\venv\Scripts\activate
-# On macOS/Linux
-source venv/bin/activate
-```
-
-### 3. Install Dependencies
-
-Install all required Python packages using `pip`:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Part A – ML/NLP Pipeline: Step-by-Step Execution
-
-Execute the following scripts in the specified order to preprocess data, train models, and evaluate them.
-
-### Step 1: Preprocess Data
-
-This script cleans the raw email data and saves it to `data/cleaned_emails.csv`.
-
-```bash
-python src/preprocess.py
-```
-
-### Step 2: Train Baseline Model
+### Step 1: Train Baseline Model
 
 This script trains a Logistic Regression model using TF-IDF features and saves the model artifacts.
 
@@ -74,7 +35,7 @@ This script trains a Logistic Regression model using TF-IDF features and saves t
 python src/train_baseline.py
 ```
 
-### Step 3: Fine-tune Transformer Model
+### Step 2: Fine-tune Transformer Model
 
 This script fine-tunes a DistilBERT model and saves the model artifacts. This step may take some time depending on your hardware.
 
@@ -82,7 +43,7 @@ This script fine-tunes a DistilBERT model and saves the model artifacts. This st
 python src/train_transformer.py
 ```
 
-### Step 4: Evaluate Models
+### Step 3: Evaluate Models
 
 This script evaluates both the baseline and transformer models, compares their performance, and saves the results to `results/model_comparison.json`.
 
